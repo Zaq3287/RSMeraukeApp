@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSMerauke.Pages.pgEditDoctorNurse"
+             Title="{Binding strTitle}"
+             BackgroundImageSource="backgroundsetting.png"
+             x:Name="Edit">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Nama:"
+               Grid.Row="0"
+               Grid.Column="0"
+               Margin="10,25,0,0"/>
+
+        <Editor Grid.Row="0"
+               Grid.Column="1"
+               Margin="10,10,10,0"
+               VerticalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               Text="{Binding strName}"/>
+
+        <Label Text="Phone:"
+               Grid.Row="1"
+               Grid.Column="0"
+               Margin="10,25,0,0"/>
+
+        <Entry Grid.Row="1"
+               Grid.Column="1"
+               Margin="10,10,10,0"
+               VerticalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               Text="{Binding strPhone}"
+               Placeholder="62881xxxxxxx"
+               Keyboard="Telephone"/>
+
+        <Button Text="{Binding strButton}"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HeightRequest="40"
+                VerticalOptions="End"
+                Command="{Binding comAdd}"/>
+    </Grid>
+</ContentPage>

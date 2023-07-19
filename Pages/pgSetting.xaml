@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSMerauke.Pages.pgSetting"
+             Title="Menu"
+             BackgroundImageSource="backgroundsetting.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Dokter"
+                    Margin="5"
+                    WidthRequest="160"
+                    HeightRequest="80"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Command="{Binding comDoctor}"
+                    ImageSource="doctor.png"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+
+            <Button Text="Perawat"
+                    Margin="5"
+                    WidthRequest="160"
+                    HeightRequest="80"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Command="{Binding comNurse}"
+                    ImageSource="nurse.png"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+
+            <Button Text="Tata tertib"
+                    Margin="5"
+                    WidthRequest="160"
+                    HeightRequest="80"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Command="{Binding comRule}"
+                    ImageSource="rule.png"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+
+            <Button Text="Denah"
+                    Margin="5"
+                    WidthRequest="160"
+                    HeightRequest="80"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Command="{Binding comMap}"
+                    ImageSource="map.png"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+        </Grid>
+
+        
+
+    </Grid>
+</ContentPage>
